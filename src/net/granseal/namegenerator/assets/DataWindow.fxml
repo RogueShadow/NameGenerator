@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="dataWindow" prefHeight="538.0" prefWidth="670.0" stylesheets="@caspian.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.granseal.namegenerator.controllers.DataWindowController">
+   <children>
+      <VBox layoutY="4.0" prefHeight="607.0" prefWidth="670.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="48.0" layoutY="28.0" prefHeight="27.0" prefWidth="605.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#close" prefHeight="27.0" prefWidth="100.0" text="Close">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </HBox>
+            <Label fx:id="listFile" layoutX="48.0" layoutY="55.0" />
+            <TabPane fx:id="dataTabs" prefHeight="537.0" prefWidth="670.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="mNameTab" text="Male Names">
+                  <content>
+                    <AnchorPane prefHeight="141.0" prefWidth="670.0">
+                           <children>
+                              <ListView fx:id="mNameList" prefHeight="444.0" prefWidth="670.0">
+                                 <contextMenu>
+                                    <ContextMenu>
+                                      <items>
+                                        <MenuItem fx:id="nameDelete" mnemonicParsing="false" onAction="#deleteItem" text="Delete" />
+                                      </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </ListView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="fNameTab" text="Female Names">
+                     <content>
+                        <AnchorPane prefHeight="141.0" prefWidth="670.0">
+                           <children>
+                              <ListView fx:id="fNameList" prefHeight="444.0" prefWidth="670.0">
+                                 <contextMenu>
+                                    <ContextMenu>
+                                       <items>
+                                          <MenuItem fx:id="nameDelete1" mnemonicParsing="false" onAction="#deleteItem" text="Delete" />
+                                       </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </ListView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="surNameTab" text="SurNames">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="509.0" prefWidth="649.0">
+                           <children>
+                              <ListView fx:id="surNameList" prefHeight="444.0" prefWidth="670.0">
+                                 <contextMenu>
+                                    <ContextMenu>
+                                       <items>
+                                          <MenuItem fx:id="surNameDelete" mnemonicParsing="false" onAction="#deleteItem" text="Delete" />
+                                       </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </ListView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="raceTab" text="Races">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="509.0" prefWidth="649.0">
+                           <children>
+                              <ListView fx:id="raceList" prefHeight="444.0" prefWidth="670.0">
+                                 <contextMenu>
+                                    <ContextMenu>
+                                       <items>
+                                          <MenuItem fx:id="raceDelete" mnemonicParsing="false" onAction="#deleteItem" text="Delete" />
+                                       </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </ListView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="jobTab" text="Jobs">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="509.0" prefWidth="649.0">
+                           <children>
+                              <ListView fx:id="jobList" prefHeight="444.0" prefWidth="670.0">
+                                 <contextMenu>
+                                    <ContextMenu>
+                                       <items>
+                                          <MenuItem fx:id="jobDelete" mnemonicParsing="false" onAction="#deleteItem" text="Delete" />
+                                       </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </ListView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="placeTab" text="Places">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="509.0" prefWidth="649.0">
+                           <children>
+                              <ListView fx:id="placeList" prefHeight="444.0" prefWidth="670.0">
+                                 <contextMenu>
+                                    <ContextMenu>
+                                       <items>
+                                          <MenuItem fx:id="placeDelete" mnemonicParsing="false" onAction="#deleteItem" text="Delete" />
+                                       </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </ListView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="worldTab" text="Worlds">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="509.0" prefWidth="649.0">
+                           <children>
+                              <ListView fx:id="worldList" prefHeight="444.0" prefWidth="670.0">
+                                 <contextMenu>
+                                    <ContextMenu>
+                                       <items>
+                                          <MenuItem fx:id="worldDelete" mnemonicParsing="false" onAction="#deleteItem" text="Delete" />
+                                       </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </ListView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <HBox prefHeight="23.0" prefWidth="638.0">
+               <children>
+                  <TextField fx:id="dataInput" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="addButton" defaultButton="true" mnemonicParsing="false" onAction="#addData" prefHeight="24.0" prefWidth="54.0" text="Add" />
+                  <ChoiceBox fx:id="genderChooser" prefHeight="25.0" prefWidth="70.0" />
+                  <ChoiceBox fx:id="worldChooser" prefHeight="25.0" prefWidth="70.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
